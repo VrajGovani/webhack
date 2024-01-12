@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Responsive Navbar</title>
+  </head>
+  <body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Web Dev Creative</a></div>
+            <ul class="links">
+                <li><a href="hero">Home</li>
+                <li><a href="bajv">vansh</li>
+                <li><a href="advcs">about us</li>
+                <li><a href="herasvvas">name</li>
+                <li><a href="advssd">hellooooooo</li>
+                <li><a href="ascxfg">Hiiii</li>
+            </ul>
+            <a href="#" class="action_btn">Get Started</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="hero">Home</li>
+            <li><a href="bajv">vansh</li>
+            <li><a href="advcs">about us</li>
+            <li><a href="herasvvas">name</li>
+            <li><a href="advssd">hellooooooo</li>
+            <li><a href="ascxfg">Hiiii</li>
+            <a href="#" class="action_btn">Get Started</a>
+        </div>
+    </header>
+    <main>
+        <section id="hero">
+            <h1>Welcome</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur <br/>
+                adipisicing elit. 
+            </p>
+        </section>
+    </main>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function(){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+
+    </script>
+  </body>
+</html>

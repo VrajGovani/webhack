@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Name</title>
+    <style>
+        /* CSS styles */
+        /* ... */
+        /* Reset default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #228B22;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section#hero {
+            background-image: url('hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .hero-content h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .cta-buttons .btn {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 10px 20px;
+            background-color: #228B22;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        #about-us {
+            background-color: #fff;
+            padding: 50px;
+            text-align: center;
+        }
+
+        #about-us h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        #about-us p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        #team-members {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            max-width: 200px;
+            margin: 10px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .team-member h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .team-member p {
+            font-size: 14px;
+        }
+
+        #partnerships {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        #partnerships h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #partnerships img {
+            max-width: 200px;
+            margin: 10px;
+        }
+
+        #mission-vision {
+            background-color: #f4f4f4;
+            padding: 50px;
+            text-align: center;
+        }
+
+        #mission-vision h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        #mission-vision p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        #decarbonization {
+            background-color: #fff;
+            padding: 50px;
+            text-align: center;
+        }
+
+        #decarbonization h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        #decarbonization p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* CSS styles */
+        /* ... */
+
+        /* Login section */
+        #login {
+            background-color: #f4f4f4;
+            padding: 50px;
+            text-align: center;
+        }
+
+        #login h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        #loginForm label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #loginForm input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        #loginForm button {
+            padding: 10px 20px;
+            background-color: #228B22;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Signup section */
+        #signup {
+            background-color: #f4f4f4;
+            padding: 50px;
+            text-align: center;
+        }
+
+        #signup h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        #signupForm label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #signupForm input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        #signupForm button {
+            padding: 10px 20px;
+            background-color: #228B22;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#decarbonization">Decarbonization</a></li>
+                <li><a href="#crimes">Crimes</a></li>
+                <li><a href="#fundraiser">Fundraiser</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#FAQ">FAQ</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#signup">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Rest of the code -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Welcome to our Initiative</h1>
+            <p>Building a sustainable future for a better world</p>
+            <div class="cta-buttons">
+                <a href="#about" class="btn">Learn More</a>
+                <a href="join copy.html" class="btn">Join Now</a>
+            </div>
+        </div>
+    </section>
+    <section id="learn-more">
+        <div class="container">
+          <h2>Learn More</h2>
+          <div class="learn-more-card">
+            <p>The team ideates to build a model to push the current world to better living conditions in reference to Decarbonisation, Crimes, and Financial Stability. We plan collaboration with the government to control the blockchain and provide funds to industries based on their efforts.</p>
+            <p>This initiative is inspired by the feasibility that cryptocurrency provides. Our main implementation is to well-verse people with live information on the important parameters regarding Pollution. Our platform will help the general audience contribute to the idea of decarbonisation.</p>
+            <p>We also aim to equip the platform with a green bot that provides solutions for each household chore contributing to carbon levels. In the Crimes section, we emphasize the lack of support for individuals stuck in such situations. Our platform draws inspiration from the Law Bot Pro, providing solutions to relevant situations mentioned in the Indian Penal Code.</p>
+            <p>Furthermore, we focus on Financial Stability by creating active employment opportunities. We provide a track of all current opportunities available and the essential or elementary skill set required to obtain a job. We also include links to resources.</p>
+            <p>Our goal is to create a unified platform that eliminates the need for individuals to jump to different platforms for specific causes. By creating a website with all the mentioned features, we aim to manage the blockchain system of funds at the national level, despite the difficulties involved.</p>
+           <a href="vraj.html" class="btn">Read More</a>
+          </div>
+        </div>
+      </section>
+    <section id="about-us">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Our initiative is dedicated to creating a sustainable future by promoting environmental awareness and
+                taking actions towards decarbonisation. We envision a world where renewable energy sources are widely
+                adopted and carbon emissions are significantly reduced.</p>
+        </div>
+
+        <div id="team-members">
+            <div class="team-member">
+                <img src="C:\Users\krish\Downloads\WhatsApp Image 2023-03-29 at 12.10.31 PM.jpeg.jpg"
+                    alt="Team Member 1">
+                <h3>Vansh Kalanti</h3>
+                <p>Founder</p>
+                <p>Randi</p>
+            </div>
+            <div class="team-member">
+                <img src="C:\Users\krish\OneDrive\Desktop\profile pic .jpg" alt="Team Member 2">
+                <h3>Krishna Randad</h3>
+                <p>co-Founder</p>
+                <p>Gamer</p>
+            </div>
+            <div class="team-member">
+                <img src="C:\Users\krish\Downloads\WhatsApp Image 2023-06-02 at 16.10.30.jpg" alt="Team Member 3">
+                <h3>Harsh Agrawal</h3>
+                <p>co-Founder</p>
+                <p>GymFreak</p>
+            </div>
+            <div class="team-member">
+                <img src="C:\Users\krish\Downloads\WhatsApp Image 2023-06-02 at 16.09.36.jpg" alt="Team Member 4">
+                <h3>Vraj Govani</h3>
+                <p>co-Founder</p>
+                <p>you will find him watching movies</p>
+            </div>
+            <div class="team-member">
+                <img src="C:\Users\krish\Downloads\WhatsApp Image 2023-06-02 at 16.10.52.jpg" alt="Team Member 5">
+                <h3>Madhur Toshniwal</h3>
+                <p>co-Founder</p>
+                <p>reel Master</p>
+            </div>
+        </div>
+
+        <div id="partnerships">
+            <h2>Partnerships</h2>
+            <img src="partnership1.jpg" alt="Quick Advertising Agency">
+            <img src="partnership2.jpg" alt="Sevashraya">
+        </div>
+    </section>
+
+    <section id="mission-vision">
+        <div class="container">
+            <h2>Mission and Vision</h2>
+            <p><strong>Mission:</strong> Our mission is to build a model that pushes the world towards better living
+                conditions through decarbonisation, crime reduction, and financial stability. We aim to collaborate with
+                the government to control blockchain and provide funds to industries based on their efforts. Inspired by
+                the feasibility provided by cryptocurrency, we seek to inform people about the important parameters
+                related to pollution and equip them with a green bot that provides solutions for carbon-contributing
+                household chores. Furthermore, we address the lack of support for individuals stuck in crimes by
+                providing solutions based on relevant situations mentioned in the Indian Penal Code through our Law Bot
+                pro-inspired platform. Additionally, we focus on financial stability by creating active employment
+                opportunities and providing essential skills required for various jobs along with resource links.</p>
+            <p><strong>Vision:</strong> Our vision is to create a unified platform that eliminates the need for
+                individuals to jump between different platforms for different causes. We aim to build a website that
+                incorporates all the features mentioned above, enabling the general audience to actively participate in
+                decarbonisation, crime reduction, and achieving financial stability. By managing a blockchain system of
+                funds at the national level, we strive to create a seamless experience for users and facilitate the
+                transition towards a sustainable and environmentally conscious future.</p>
+        </div>
+    </section>
+
+    <section id="decarbonization">
+        <div class="container">
+            <h2>What is Decarbonization?</h2>
+            <p>Decarbonization refers to the process of reducing or eliminating carbon dioxide (CO2) emissions from
+                various sources, particularly those associated with human activities. The main objective of
+                decarbonization is to mitigate climate change by reducing the concentration of greenhouse gases in the
+                atmosphere.</p>
+            <p>Carbon dioxide is a major greenhouse gas responsible for trapping heat in the Earth's atmosphere and
+                contributing to global warming. The primary sources of CO2 emissions include burning fossil fuels such
+                as coal, oil, and natural gas for electricity generation, transportation, industrial processes, and
+                residential and commercial heating.</p>
+            <p>Decarbonization strategies aim to shift away from these high-carbon energy sources and transition towards
+                cleaner and more sustainable alternatives. Here are a few key approaches to decarbonization:</p>
+            <ul>
+                <li>Renewable Energy: Increasing the deployment of renewable energy sources, such as solar, wind,
+                    hydroelectric, and geothermal power, helps replace fossil fuel-based electricity generation. These
+                    sources produce little to no CO2 emissions during operation.</li>
+                <li>Energy Efficiency: Improving energy efficiency in buildings, transportation, and industrial
+                    processes reduces overall energy consumption and associated CO2 emissions. This can be achieved
+                    through technological advancements, better insulation, efficient appliances, and transportation
+                    systems.</li>
+                <li>Electrification: Shifting from fossil fuel-powered vehicles to electric vehicles (EVs) helps reduce
+                    CO2 emissions from transportation. Electrification can also extend to other sectors, such as heating
+                    and industrial processes, by replacing fossil fuel-based systems with electric alternatives.</li>
+                <li>Carbon Capture and Storage (CCS): CCS technologies capture CO2 emissions from power plants and
+                    industrial facilities, compressing and storing it underground or utilizing it for industrial
+                    purposes. This approach aims to prevent CO2 from entering the atmosphere.</li>
+                <li>Sustainable Land Use: Preserving and restoring forests, which act as natural carbon sinks, can help
+                    sequester CO2 from the atmosphere. Sustainable land management practices, including reforestation
+                    and afforestation, play a crucial role in decarbonization efforts.</li>
+            </ul>
+            <p>Decarbonization is a critical step in mitigating climate change and transitioning to a sustainable and
+                low-carbon economy. It requires collaboration between governments, businesses, communities, and
+                individuals to adopt and support cleaner and more sustainable practices.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+        </div>
+    </footer>
+
+    <section id="login">
+        <div class="container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="signup">
+        <div class="container">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript code for handling login and signup forms
+
+        // Login form submission
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent the form from submitting
+
+            // Get the entered username and password
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Perform your login authentication logic here
+            // Example: Check if the username and password are valid
+            if (username === "admin" && password === "password") {
+                alert("Login successful");
+                // Redirect to the desired page or perform any other action
+            } else {
+                alert(".")
+            }
+        </script>
+</body>
+</html>
