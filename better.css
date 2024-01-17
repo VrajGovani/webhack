@@ -1,0 +1,134 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  header {
+    background-color: #228B22;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  section#hero {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .cta-buttons .btn {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #228B22;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  #about-us {
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  #about-us h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  #about-us p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  #team-members {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .team-member {
+    max-width: 200px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .team-member h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .team-member p {
+    font-size: 14px;
+  }
+  
+  #partnerships {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  #partnerships h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  #partnerships img {
+    max-width: 200px;
+    margin: 10px;
+  }
+  
+  #mission-vision {
+    background-color: #f4f4f4;
+    padding: 50px;
+  
